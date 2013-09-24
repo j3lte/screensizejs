@@ -22,3 +22,7 @@ Make sure you reset the font-size on the body tag
   }
 </style>
 ```
+
+## Demo
+
+Demo can be found [here](http://htmlpreview.github.io/?https://github.com/j3lte/screensizejs/blob/master/index.html "Here") 
