@@ -37,8 +37,8 @@
      * @return {void}
      */
     function handleResize() {
-        var innerWidth = window.innerWidth || document.documentElement.clientWidth
-            innerHeight = window.innerWidth || document.documentElement.clientHeight;
+        var innerWidth = window.innerWidth || document.documentElement.clientWidth,
+            innerHeight = window.innerHeight || document.documentElement.clientHeight;
         document.getElementById("screensize").innerHTML = "Fontsize: " + fontSize + "px, <br /> Screensize: " + parseInt(innerWidth / fontSize, 10) + " x " + parseInt(innerHeight / fontSize, 10) + " em";
     }
 

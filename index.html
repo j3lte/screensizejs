@@ -5,12 +5,42 @@
         <title>Test resizeJS</title>
         <script type="text/javascript" src="./screensize.js"></script>
         <style type="text/css">
-            body {
-                font-size:16px;
+            @import url(http://fonts.googleapis.com/css?family=Average+Sans);
+            @import url(http://fonts.googleapis.com/css?family=Average);
+
+            *, ::after, ::before 
+            {   
+              
+                -webkit-box-sizing: border-box;
+                   -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+                        
+                -webkit-transition: all .3s ease-in-out 0;
+                   -moz-transition: all .3s ease-in-out 0;
+                        transition: all .3s ease-in-out 0;
+            }
+
+            body { font-family: "Average", "Lucida Sans Unicode", "Calibri"; font-size:16px;}
+            #md-content pre {
+                background-color: #f8f8f8;
+                border: 1px solid #ddd;
+                font-size: 13px;
+                line-height: 19px;
+                overflow: auto;
+                padding: 6px 10px;
+                border-radius: 3px
             }
         </style>
     </head>
     <body>
-
+        <div id="content"></div>
+        <script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.js'></script>
+        <script>
+            $(document).ready(function() {
+            $('#content')
+                .html('loading...')
+                .load('http://markdown.io/https://raw.github.com/j3lte/screensizejs/master/README.md #md-content', function() {});
+            });
+        </script>
     </body>
 </html>
